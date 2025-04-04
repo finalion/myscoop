@@ -1,0 +1,38 @@
+{
+    "version": "3.5.1-16101",
+    "description": "Your unified solution for effortless file management and secure collaboration",
+    "homepage": "https://www.synology.com/en-global/dsm/feature/drive",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.synology.com/en-global/company/legal/terms_EULA"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://global.synologydownload.com/download/Utility/SynologyDriveClient/3.5.1-16101/Windows/Installer/x86_64/Synology%20Drive%20Client-3.5.1-16101-x64.msi"
+        },
+        "32bit": {
+            "url": "https://global.synologydownload.com/download/Utility/SynologyDriveClient/3.5.1-16101/Windows/Installer/x86_64/Synology%20Drive%20Client-3.5.1-16101-x86.msi"
+        }
+    },
+    "shortcuts": [
+        [
+            "Synology/SynologyDrive/bin/launcher.exe",
+            "Synology Drive Client"
+        ]
+    ],
+    "innosetup":false,
+    "checkver": {
+        "url": "https://archive.synology.cn/download/Utility/SynologyDriveClient",
+        "regex": "/download/Utility/SynologyDriveClient/([\\d.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://global.synologydownload.com/download/Utility/SynologyDriveClient/$version/Windows/Installer/x86_64/Synology%20Drive%20Client-$version-x64.msi#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://global.synologydownload.com/download/Utility/SynologyDriveClient/$version/Windows/Installer/x86_64/Synology%20Drive%20Client-$version-x86.msi#/dl.7z"
+            }
+        }
+    }
+}
